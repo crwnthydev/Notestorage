@@ -2,7 +2,7 @@ import { createRouter, createWebHashHistory } from "vue-router";
 import Main from '@/pages/Main';
 import NotesPage from '@/pages/NotesPage';
 import About from '@/pages/About';
-import NoteDetails from '@/pages/NoteDetails';
+import NoteInner from '@/pages/NoteInner';
 
 const routes = [
     {
@@ -18,8 +18,10 @@ const routes = [
         component: About,
     },
     {
+        name: 'details',
         path: '/notes/:id',
-        component: NoteDetails,
+        component: NoteInner,
+        props: true
     },
 ]
 

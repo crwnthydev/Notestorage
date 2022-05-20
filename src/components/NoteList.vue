@@ -2,7 +2,7 @@
     <div v-if="notes.length > 0" class="notes">
         <h2 class="notes__heading">All notes:</h2>
         <transition-group name="note-list">
-            <note-item v-for="note in notes" :key="note.id" :note="note" @remove="$emit('remove', note)"></note-item>
+            <note-item v-for="note in notes" :key="note.id" :note="note" @remove="$emit('remove', note)" @edit="$emit('edit', note)"></note-item>
         </transition-group>
     </div>
     <div v-else class="no-notes">

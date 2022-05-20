@@ -5,7 +5,8 @@
             <div class="note__body">{{note.body}}</div>
         </div>
         <div class="note__buttons">
-            <custom-button @click="$router.push(`/notes/${note.id}`)">Open</custom-button>
+            <router-link :to="{name: 'details', path: `/notes/${note.id}`, params: note}">Open</router-link>
+            <custom-button @click="$emit('edit', note)">Edit</custom-button>
             <custom-button @click="$emit('remove', note)">Delete</custom-button>
         </div>
     </div>
