@@ -1,20 +1,27 @@
 <template>
-	<main class="container">
-		<custom-input type="text" placeholder="Search" :model-value="searchQuery" @update:model-value="setSearchQuery"></custom-input>
-		<div class="row">
-			<custom-button @click="showCreateDialog">Create note</custom-button>
-			<custom-select :model-value="selectedSort" @update:model-value="setSelectedSort" :titleOption="'Sort notes'" :options="sortOptions"></custom-select>
-		</div>
-		<custom-dialog v-model:show="createDialogVisible">
-			<note-form @create="addNote"></note-form>
-		</custom-dialog>
-		<custom-dialog v-model:show="editDialogVisible">
-			<edit-form @edit="hideEditDialog" :thisNote="editableNote"></edit-form>
-		</custom-dialog>
-		<note-list v-if="!isLoading" :notes="sortedAndSearched" @remove="removeNote" @edit="showEditDialog"></note-list>
-		<div v-if="isLoading" class="is-loading">Loading...</div>
-		<div v-intersection="loadNotes" class="observer"></div>
-	</main>
+	<div class="notes-page">
+		<aside class="aside">
+			<custom-nav></custom-nav>
+			<div class="notes-page__actions">
+				<custom-input type="text" placeholder="Search" :model-value="searchQuery" @update:model-value="setSearchQuery"></custom-input>
+				<div class="row">
+					<custom-button @click="showCreateDialog">Create note</custom-button>
+					<custom-select :model-value="selectedSort" @update:model-value="setSelectedSort" :titleOption="'Sort notes'" :options="sortOptions"></custom-select>
+				</div>
+				<custom-dialog v-model:show="createDialogVisible">
+					<note-form @create="addNote"></note-form>
+				</custom-dialog>
+				<custom-dialog v-model:show="editDialogVisible">
+					<edit-form @edit="hideEditDialog" :thisNote="editableNote"></edit-form>
+				</custom-dialog>
+			</div>
+		</aside>
+		<main class="wrapper">
+			<note-list v-if="!isLoading" :notes="sortedAndSearched" @remove="removeNote" @edit="showEditDialog"></note-list>
+			<div v-if="isLoading" class="is-loading">Loading...</div>
+			<div v-intersection="loadNotes" class="observer"></div>
+		</main>
+	</div>
 </template>
 
 <script>
@@ -94,12 +101,5 @@ export default {
 </script>
 
 <style lang="scss">
-	.observer {
-		height: 15px;
-		opacity: 0;
-		pointer-events: none;
-	}
-	.note {
-		height: 140px;
-	}
+	@import "@/style/pages/notes-page.scss"
 </style>

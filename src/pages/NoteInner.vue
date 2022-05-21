@@ -1,5 +1,13 @@
 <template>
-   <note-details></note-details>
+   <div class="details">
+      <header class="header">
+         <custom-nav></custom-nav>
+      </header>
+      <div class="container">
+         <note-details></note-details>
+         <custom-button @click="$router.push('/notes')">Back to list</custom-button>
+      </div>
+   </div>
 </template>
 
 <script>

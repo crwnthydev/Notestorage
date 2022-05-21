@@ -1,5 +1,9 @@
 <template>
-    <custom-nav></custom-nav>
+    <div class="home">
+        <header class="heqder">
+            <custom-nav></custom-nav>
+        </header>
+    </div>
 </template>
 
 <script>

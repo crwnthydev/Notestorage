@@ -7,20 +7,20 @@ import NoteInner from '@/pages/NoteInner';
 const routes = [
     {
         path: '/',
-        component: Main,
+        component: () => import('@/pages/Main')
     },
     {
         path: '/notes',
-        component: NotesPage,
+        component: () => import('@/pages/NotesPage')
     },
     {
         path: '/about',
-        component: About,
+        component: () => import('@/pages/About')
     },
     {
         name: 'details',
         path: '/notes/:id',
-        component: NoteInner,
+        component: () => import('@/pages/NoteInner'),
         props: true
     },
 ]
