@@ -1,0 +1,200 @@
+.navbar {
+
+    .header & {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        a, button {
+            &:focus {
+                outline: 1px dashed $color-shady;
+            }
+        }
+
+        &__home {
+
+            @include desktop {
+                margin: 0 vw(16) 0 0;
+            }
+
+            @include low-screen {
+                margin: 0 vh(16) 0 0;
+            }
+        }
+
+        &__button {
+
+            &:last-of-type {
+
+                @include desktop {
+                    margin: 0 0 0 vw(16);
+                }
+    
+                @include low-screen {
+                    margin: 0 0 0 vh(16);
+                }
+            }
+        }
+
+        &__wrapper {
+
+            @include desktop {
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+            }
+        }
+        
+        @include desktop {
+            width: 100%;
+            max-width: vw(1360);
+            margin: 0 auto;
+            padding: vw(30) vw(15);
+        }
+
+        @include low-screen {
+            max-width: vh(1360);
+            padding: vh(30) vh(15);
+        }
+
+        .home & {
+            justify-content: center;
+
+            &__wrapper {
+                justify-content: center;
+                overflow: hidden;
+                
+                @include desktop {
+                    height: vw(590);
+                }
+
+                @include low-screen {
+                    height: vh(590);
+                }
+            }
+            
+            &__button {
+                font-size: vm(50);
+                font-family: $font-secondary;
+                position: relative;
+                color: $color-black;
+                background-color: $color-white;
+                font-weight: 500;
+
+                &:hover {
+                    background-color: $color-shady-white;
+                }
+
+                &::after {
+                    
+                    @include desktop {
+                        content: '';
+                        position: absolute;
+                        width: 102%;
+                        height: 4px;
+                        background-color: $color-primary;
+                        transition: $transition-base;
+                        bottom: vw(-30);
+                    }
+
+                    @include low-screen {
+                        bottom: vh(-30);
+                    }
+                }
+
+                &:focus {
+                    outline: none;
+                }
+
+                &:first-of-type {
+                    border-right: 2px solid $color-primary;
+
+                    &::after {
+                        left: 0;
+                    }
+
+                    &:hover {
+
+                        @include desktop {
+
+                            &::after {
+                                transform: translateX(-200%);
+                            }
+                        }
+                    }
+                    
+                }
+
+                &:last-of-type {
+                    border-left: 2px solid $color-primary;
+
+                    &::after {
+                        right: 0;
+                    }
+
+                    &:hover {
+
+                        @include desktop {
+                            
+                            &::after {
+                                transform: translateX(200%);
+                            }
+                        }
+                    }
+
+                    @include desktop {
+                        margin: 0;
+                    }
+                }
+
+                @include desktop {
+                    width: vw(320);
+                    height: vw(500);
+                    font-size: vw(42);
+                }
+
+                @include low-screen {
+                    width: vh(320);
+                    height: vh(500);
+                    font-size: vh(42);
+                }
+            }
+        }
+    }
+
+    .aside & {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        &__home,
+        &__button {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 0 vm(12) 0;
+            padding-top: vm(8);
+            padding-bottom: vm(8);
+
+            @include desktop {
+                margin: 0 0 vw(12) 0;
+                padding-top: vw(8);
+                padding-bottom: vw(8);
+            }
+
+            @include low-screen {
+                margin: 0 0 vh(12) 0;
+                padding-top: vh(8);
+                padding-bottom: vh(8);
+            }
+        }
+    }
+}

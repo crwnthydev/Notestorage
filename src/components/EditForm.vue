@@ -1,6 +1,6 @@
 <template>
-    <form @submit.prevent>
-        <h2>Edit a note</h2>
+    <form class="form" @submit.prevent>
+        <h2 class="form__heading">Edit a note</h2>
         <custom-input v-focus type="text" v-model="note.title"></custom-input>
         <custom-textarea type="text" v-model="note.body"></custom-textarea>
         <custom-button type="button" @click="edit">Submit changes</custom-button>
@@ -35,5 +35,5 @@ export default {
 </script>
 
 <style lang="scss">
-
+@import "@/style/components/form.scss";
 </style>

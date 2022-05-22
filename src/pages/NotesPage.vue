@@ -3,22 +3,28 @@
 		<aside class="aside">
 			<custom-nav></custom-nav>
 			<div class="notes-page__actions">
+				<custom-button @click="showCreateDialog">Create note</custom-button>
+				<p>Search notes:</p>
 				<custom-input type="text" placeholder="Search" :model-value="searchQuery" @update:model-value="setSearchQuery"></custom-input>
-				<div class="row">
-					<custom-button @click="showCreateDialog">Create note</custom-button>
-					<custom-select :model-value="selectedSort" @update:model-value="setSelectedSort" :titleOption="'Sort notes'" :options="sortOptions"></custom-select>
-				</div>
-				<custom-dialog v-model:show="createDialogVisible">
-					<note-form @create="addNote"></note-form>
-				</custom-dialog>
-				<custom-dialog v-model:show="editDialogVisible">
-					<edit-form @edit="hideEditDialog" :thisNote="editableNote"></edit-form>
-				</custom-dialog>
+				<p>Sort notes:</p>
+				<custom-select :model-value="selectedSort" @update:model-value="setSelectedSort" :titleOption="'Sort notes'" :options="sortOptions"></custom-select>
 			</div>
 		</aside>
 		<main class="wrapper">
 			<note-list v-if="!isLoading" :notes="sortedAndSearched" @remove="removeNote" @edit="showEditDialog"></note-list>
 			<div v-if="isLoading" class="is-loading">Loading...</div>
+			<div class="modals">
+				<transition name="fade">
+					<custom-dialog v-model:show="createDialogVisible">
+						<note-form @create="addNote"></note-form>
+					</custom-dialog>
+				</transition>
+				<transition name="fade">
+					<custom-dialog v-model:show="editDialogVisible">
+						<edit-form @edit="hideEditDialog" :thisNote="editableNote"></edit-form>
+					</custom-dialog>
+				</transition>
+			</div>
 			<div v-intersection="loadNotes" class="observer"></div>
 		</main>
 	</div>
@@ -38,6 +44,7 @@ export default {
 		EditForm,
 		NoteList,
 		CustomDialog,
+		isListPage: false,
 	},
 	data(){
 		return {
@@ -79,7 +86,10 @@ export default {
 
 	},
 	mounted(){
-		
+		this.$store.commit('setListTrue')
+	},
+	unmounted() {
+		this.$store.commit('setListFalse')
 	},
 	computed: {
 		...mapState({
@@ -101,5 +111,5 @@ export default {
 </script>
 
 <style lang="scss">
-	@import "@/style/pages/notes-page.scss"
+@import "@/style/pages/notes-page.scss"
 </style>

@@ -1,0 +1,31 @@
+.btn {
+    font-family: $font-primary;
+	font-weight: 400;
+	font-style: normal;
+	font-size: vm(16);
+	line-height: vm(19);
+	background-color: $color-primary;
+    padding: vm(4) vm(10);
+    border: none;
+    outline: none;
+	color: $color-text;
+	text-decoration: none;
+    transition: $transition-base;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $color-accent;
+    }
+
+	@include desktop {
+		padding: vw(4) vw(10);
+        font-size: vw(17);
+		line-height: vw(21);
+	}
+
+	@include low-screen {
+		padding: vh(4) vh(10);
+        font-size: vh(17);
+		line-height: vh(21);
+	}
+}

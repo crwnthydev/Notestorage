@@ -17,5 +17,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+@import "@/style/components/UI/input.scss"
 </style>

@@ -3,6 +3,27 @@
     margin: 0 auto;
     position: relative;
 
+    &__actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            
+            @include desktop {
+                margin: 0 0 vw(22) 0;
+            }
+
+            @include low-screen {
+                margin: 0 0 vh(22) 0;
+            }
+        }
+    }
+
     @include desktop {
         max-width: vw(1360);
         padding: 0 vw(15);
@@ -18,15 +39,53 @@
 
 .aside {
     width: 100%;
-    position: fixed;
-    right: 0;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    p {
+        font-size: vm(14);
+        line-height: 1em;
+        margin: 0 0 vm(4) 0;
+        text-align: left;
+        width: 100%;
+
+        @include desktop {
+            font-size: vw(14);
+            margin: 0 0 vw(4) 0;
+        }
+
+        @include low-screen {
+            font-size: vh(14);
+            margin: 0 0 vh(4) 0;
+        }
+    }
+
+    input {
+        width: 100%;
+        margin: 0 0 vm(12) 0;
+
+        @include desktop {
+            margin: 0 0 vw(12) 0;
+        }
+
+        @include low-screen {
+            margin: 0 0 vh(12) 0;
+        }
+    }
 
     @include desktop {
         max-width: vw(300);
+        right: 0;
+        padding: 0 vw(60) 0 0;
+        top: vw(105);
+        position: fixed;
     }
 
     @include low-screen {
         max-width: vh(300);
+        top: vh(105);
+        padding: 0 vh(60) 0 0;
     }
 }
 
@@ -34,12 +93,12 @@
     width: 100%;
 
     @include desktop {
-        max-width: vw(1060);
+        max-width: vw(1040);
         padding: 0 vw(50) 0 0;
     }
 
     @include low-screen {
-        max-width: vh(1060);
+        max-width: vh(1040);
         padding: 0 vh(50) 0 0;
     }
 }

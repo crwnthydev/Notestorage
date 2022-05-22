@@ -4,25 +4,37 @@
     background-color: $color-white;
     margin: 0 0 vm(20) 0;
     color: $color-black;
-    padding: vm(10) vm(15) vm(15) vm(15);
+    padding: vm(15);
+    position: relative;
 
     &__buttons {
 
         a {
-            background-color: $color-accent;
             margin: 0 vm(12) 0 0;
+            background-color: $color-primary;
+            padding: vm(4) vm(10);
+            color: $color-text;
+
+            &:hover {
+                background-color: $color-accent;
+            }
 
             @include desktop {
                 margin: 0 vw(12) 0 0;
+                padding: vw(4) vw(10);
+                font-size: vw(17);
+                line-height: vw(21);
             }
 
             @include low-screen {
                 margin: 0 vh(12) 0 0;
+                padding: vh(4) vh(10);
+                font-size: vh(17);
+                line-height: vh(21);
             }
         }
 
         button {
-            border: none;
 
             &:first-of-type {
                 margin: 0 vm(12) 0 0;
@@ -35,6 +47,28 @@
                     margin: 0 vh(12) 0 0;
                 }
             }
+        }
+    }
+
+    &__identificator {
+        position: absolute;
+        right: vm(5);
+        top: vm(5);
+        color: $color-black;
+        opacity: 0.9;
+        font-size: vm(11);
+        line-height: 1em;
+
+        @include desktop {
+            top: vw(8);
+            right: vw(15);
+            font-size: vw(14);
+        }
+
+        @include low-screen {
+            top: vh(8);
+            right: vh(15);
+            font-size: vh(14);
         }
     }
 
@@ -57,6 +91,7 @@
         padding: 0 0 vm(12) 0;
         border-bottom: 3px solid $color-background;
         margin: 0 0 vm(12) 0;
+        font-family: $font-secondary;
 
         @include desktop {
             font-size: vw(22);
@@ -76,12 +111,12 @@
     @include desktop {
         min-height: vw(140);
         margin: 0 0 vw(20) 0;
-        padding: vw(10) vw(25) vw(25) vw(25);
+        padding: vw(25);
     }
 
     @include desktop {
         min-height: vh(140);
         margin: 0 0 vh(20) 0;
-        padding: vh(10) vh(25) vh(25) vh(25);
+        padding: vh(25);
     }
 }

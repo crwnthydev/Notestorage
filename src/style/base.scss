@@ -13,11 +13,13 @@ $desktop-vh: 850;
 $color-white: #ffffff;
 $color-black: #000000;
 $color-text: #ffffff;
-$color-primary: #030303;
-// $color-accent: #d71212;
-$color-accent: #2eaa18;
+// $color-primary: #2eaa18;
+// $color-accent: #367d29;
+$color-primary: #d71212;
+$color-accent: #7d0505;
 $color-background: #111010;
 $color-shady: rgba(76, 26, 13, 0.4);
+$color-shady-white: #eeeeee;
 
 $font-primary: 'Montserrat', sans-serif;
 $font-secondary: 'PT Serif', serif;
@@ -86,50 +88,26 @@ body {
 	}
 }
 
+*::selection {
+	color: $color-text;
+	background-color: $color-primary;
+}
+
 .app {
-	min-height: 100vh;
 	width: 100%;
 }
 
-a, button {
+a {
 	outline: none;
 	color: $color-text;
 	text-decoration: none;
 	transition: $transition-base;
-	padding: vm(4) vm(10);
-
-	@include desktop {
-		padding: vw(4) vw(10);
-	}
-
-	@include low-screen {
-		padding: vh(4) vh(10);
-	}
-}
-
-button {
-	font-family: $font-primary;
-	font-weight: 400;
-	font-style: normal;
-	font-size: vm(16);
-	line-height: vm(19);
-	background-color: $color-accent;
-
-	@include desktop {
-		font-size: vw(17);
-		line-height: vw(21);
-	}
-
-	@include low-screen {
-		font-size: vh(17);
-		line-height: vh(21);
-	}
 }
 
 a {
 
 	&:hover {
-		color: $color-accent;
+		color: $color-primary;
 	}
 }
 
@@ -144,12 +122,12 @@ a {
 	margin: 0 auto;
 	
 	@include desktop {
-		max-width: vw(1400);
+		max-width: vw(1360);
 		padding: 0 vw(15);
 	}
 
 	@include low-screen() {
-		max-width: vh(1400);
+		max-width: vh(1360);
 		padding: 0 vh(15);
 	}
 }
@@ -172,10 +150,15 @@ a {
 
 .fade-enter-active,
 .fade-leave-active {
-		transition: opacity 0.5s ease;
+	transition: opacity 0.5s ease;
 }
 
 .fade-enter-from,
 .fade-leave-to {
-		opacity: 0;
+	opacity: 0;
+}
+
+.fade-enter,
+.fade-leave-to {
+    opacity: 0
 }

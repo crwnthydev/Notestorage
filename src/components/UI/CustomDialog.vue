@@ -16,24 +16,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-	.dialog {
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background: rgba(0, 0, 0, 0.4);
-		position: fixed;
-
-		&__content {
-			min-width: 300px;
-			min-height: 250px;
-			border: 1px solid black;
-			background: white;
-			padding: 15px;
-		}
-	}
-
+@import "@/style/components/UI/dialog.scss"
 </style>
