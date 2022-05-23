@@ -1,34 +1,38 @@
 .dialog {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.4);
-    position: fixed;
-    z-index: 1;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0, 0, 0, 0.4);
+	position: fixed;
+	z-index: 1;
 
-    &__content {
-        width: 100%;
-        min-height: vm(300);
-        border: 1px solid $color-background;
-        background: $color-white;
-        padding: vm(15);
-        z-index: 2;
-        position: relative;
+	&__content {
+		width: 100%;
+		box-sizing: border-box;
+		border: 1px solid $color-background;
+		background: $color-white;
+		padding: vm(10) vm(15);
+		z-index: 2;
+		position: relative;
 
-        @include desktop {
-            width: vw(400);
-            padding: vw(24);
-            min-height: vw(300);
-        }
+		@include landscape {
+			max-width: 70%;
+		}
 
-        @include low-screen {
-            width: vh(400);
-            padding: vh(24);
-            min-height: vh(300);
-        }
-    }
+		@include desktop {
+			width: vw(400);
+			padding: vw(24);
+			min-height: vw(300);
+		}
+
+		@include low-screen {
+			width: vh(400);
+			padding: vh(24);
+			min-height: vh(300);
+		}
+	}
 }

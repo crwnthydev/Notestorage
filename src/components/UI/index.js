@@ -6,10 +6,10 @@ import CustomSelect from "@/components/UI/CustomSelect";
 import CustomNav from "@/components/UI/CustomNav";
 
 export default [
-    CustomButton,
-    CustomInput,
-    CustomTextarea,
-    CustomDialog,
-    CustomSelect,
-    CustomNav,
+	CustomButton,
+	CustomInput,
+	CustomTextarea,
+	CustomDialog,
+	CustomSelect,
+	CustomNav,
 ]

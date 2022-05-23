@@ -1,55 +1,59 @@
 .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
 
-    input {
-        width: 100%;
-    }
+	input {
+		width: 100%;
+	}
 
-    textarea {
-        width: 100%;
-        resize: none;
-        min-height: vm(180);
+	textarea {
+		width: 100%;
+		resize: none;
+		min-height: vm(190);
 
-        @include desktop {
-            min-height: vw(180);
-        }
+		@include landscape {
+			min-height: vm(120);
+		}
 
-        @include low-screen {
-            min-height: vh(180);
-        }
-    }
+		@include desktop {
+			min-height: vw(180);
+		}
 
-    input, 
-    textarea {
-        margin: 0 0 vm(14) 0;
+		@include low-screen {
+			min-height: vh(180);
+		}
+	}
 
-        @include desktop {
-            margin: 0 0 vw(16) 0;
-        }
+	input, 
+	textarea {
+		margin: 0 0 vm(14) 0;
 
-        @include low-screen {
-            margin: 0 0 vh(16) 0;
-        }
-    }
+		@include desktop {
+			margin: 0 0 vw(16) 0;
+		}
 
-    &__heading {
-        margin: 0 0 vm(18) 0;
-        color: $color-black;
-        font-size: vm(28);
-        line-height: 1em;
-        font-family: $font-secondary;
+		@include low-screen {
+			margin: 0 0 vh(16) 0;
+		}
+	}
 
-        @include desktop {
-            margin: 0 0 vw(20) 0;
-            font-size: vw(28);
-        }
+	&__heading {
+		margin: 0 0 vm(18) 0;
+		color: $color-black;
+		font-size: vm(28);
+		line-height: 1em;
+		font-family: $font-secondary;
 
-        @include low-screen {
-            margin: 0 0 vh(20) 0;
-            font-size: vh(28);
-        }
-    }
+		@include desktop {
+			margin: 0 0 vw(20) 0;
+			font-size: vw(28);
+		}
+
+		@include low-screen {
+			margin: 0 0 vh(20) 0;
+			font-size: vh(28);
+		}
+	}
 }

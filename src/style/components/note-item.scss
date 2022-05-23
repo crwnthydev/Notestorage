@@ -1,122 +1,122 @@
 .note {
-    box-sizing: border-box;
-    min-height: vm(140);
-    background-color: $color-white;
-    margin: 0 0 vm(20) 0;
-    color: $color-black;
-    padding: vm(15);
-    position: relative;
+	box-sizing: border-box;
+	min-height: vm(140);
+	background-color: $color-white;
+	margin: 0 0 vm(22) 0;
+	color: $color-black;
+	padding: vm(15);
+	position: relative;
 
-    &__buttons {
+	&__buttons {
 
-        a {
-            margin: 0 vm(12) 0 0;
-            background-color: $color-primary;
-            padding: vm(4) vm(10);
-            color: $color-text;
+		a {
+			margin: 0 vm(12) 0 0;
+			background-color: $color-primary;
+			padding: vm(4) vm(10);
+			color: $color-text;
 
-            &:hover {
-                background-color: $color-accent;
-            }
+			&:hover {
+				background-color: $color-accent;
+			}
 
-            @include desktop {
-                margin: 0 vw(12) 0 0;
-                padding: vw(4) vw(10);
-                font-size: vw(17);
-                line-height: vw(21);
-            }
+			@include desktop {
+				margin: 0 vw(12) 0 0;
+				padding: vw(4) vw(10);
+				font-size: vw(17);
+				line-height: vw(21);
+			}
 
-            @include low-screen {
-                margin: 0 vh(12) 0 0;
-                padding: vh(4) vh(10);
-                font-size: vh(17);
-                line-height: vh(21);
-            }
-        }
+			@include low-screen {
+				margin: 0 vh(12) 0 0;
+				padding: vh(4) vh(10);
+				font-size: vh(17);
+				line-height: vh(21);
+			}
+		}
 
-        button {
+		button {
 
-            &:first-of-type {
-                margin: 0 vm(12) 0 0;
+			&:first-of-type {
+				margin: 0 vm(12) 0 0;
 
-                @include desktop {
-                    margin: 0 vw(12) 0 0;
-                }
+				@include desktop {
+					margin: 0 vw(12) 0 0;
+				}
 
-                @include low-screen {
-                    margin: 0 vh(12) 0 0;
-                }
-            }
-        }
-    }
+				@include low-screen {
+					margin: 0 vh(12) 0 0;
+				}
+			}
+		}
+	}
 
-    &__identificator {
-        position: absolute;
-        right: vm(5);
-        top: vm(5);
-        color: $color-black;
-        opacity: 0.9;
-        font-size: vm(11);
-        line-height: 1em;
+	&__identificator {
+		position: absolute;
+		right: vm(5);
+		top: vm(5);
+		color: $color-black;
+		opacity: 0.9;
+		font-size: vm(11);
+		line-height: 1em;
 
-        @include desktop {
-            top: vw(8);
-            right: vw(15);
-            font-size: vw(14);
-        }
+		@include desktop {
+			top: vw(8);
+			right: vw(15);
+			font-size: vw(14);
+		}
 
-        @include low-screen {
-            top: vh(8);
-            right: vh(15);
-            font-size: vh(14);
-        }
-    }
+		@include low-screen {
+			top: vh(8);
+			right: vh(15);
+			font-size: vh(14);
+		}
+	}
 
-    &__content {
-        margin: 0 0 vm(20) 0;
-        
-        @include desktop {
-            margin: 0 0 vw(20) 0;
-        }
+	&__content {
+		margin: 0 0 vm(20) 0;
+		
+		@include desktop {
+			margin: 0 0 vw(20) 0;
+		}
 
-        @include low-screen {
-            margin: 0 0 vh(20) 0;
-        }
-    }
+		@include low-screen {
+			margin: 0 0 vh(20) 0;
+		}
+	}
 
-    &__title {
-        font-weight: 500;
-        font-size: vm(22);
-        line-height: vm(28);
-        padding: 0 0 vm(12) 0;
-        border-bottom: 3px solid $color-background;
-        margin: 0 0 vm(12) 0;
-        font-family: $font-secondary;
+	&__title {
+		font-weight: 500;
+		font-size: vm(22);
+		line-height: vm(28);
+		padding: 0 0 vm(12) 0;
+		border-bottom: 3px solid $color-background;
+		margin: 0 0 vm(12) 0;
+		font-family: $font-secondary;
 
-        @include desktop {
-            font-size: vw(22);
-            line-height: vw(28);
-            padding: 0 0 vw(12) 0;
-            margin: 0 0 vw(12) 0;
-        }
+		@include desktop {
+			font-size: vw(22);
+			line-height: vw(28);
+			padding: 0 0 vw(12) 0;
+			margin: 0 0 vw(12) 0;
+		}
 
-        @include low-screen {
-            font-size: vh(22);
-            line-height: vh(28);
-            padding: 0 0 vh(12) 0;
-            margin: 0 0 vh(12) 0;
-        }
-    }
-    
-    @include desktop {
-        min-height: vw(140);
-        margin: 0 0 vw(20) 0;
-        padding: vw(25);
-    }
+		@include low-screen {
+			font-size: vh(22);
+			line-height: vh(28);
+			padding: 0 0 vh(12) 0;
+			margin: 0 0 vh(12) 0;
+		}
+	}
+	
+	@include desktop {
+		min-height: vw(140);
+		margin: 0 0 vw(20) 0;
+		padding: vw(25);
+	}
 
-    @include desktop {
-        min-height: vh(140);
-        margin: 0 0 vh(20) 0;
-        padding: vh(25);
-    }
+	@include desktop {
+		min-height: vh(140);
+		margin: 0 0 vh(20) 0;
+		padding: vh(25);
+	}
 }

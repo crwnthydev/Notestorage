@@ -1,24 +1,26 @@
 select {
-    width: 100%;
-    padding: vm(8) vm(10);
-    border: 1px solid $color-background;
-    background-color: $color-white;
-    transition: $transition-base;
-    cursor: pointer;
+	width: 100%;
+	padding: vm(8) vm(10);
+	border: 1px solid $color-background;
+	background-color: $color-white;
+	transition: $transition-base;
+	cursor: pointer;
+	font-size: vm(16);
+	line-height: vm(21);
 
-    &:focus {
-        outline: 1px solid $color-accent;
-    }
+	&:focus {
+		outline: 1px solid $color-accent;
+	}
 
-    @include desktop {
-        padding: vw(8) vw(10);
-        font-size: vw(17);
+	@include desktop {
+		padding: vw(8) vw(10);
+		font-size: vw(17);
 		line-height: vw(21);
-    }
+	}
 
-    @include low-screen {
-        padding: vh(8) vh(10);
-        font-size: vh(17);
+	@include low-screen {
+		padding: vh(8) vh(10);
+		font-size: vh(17);
 		line-height: vh(21);
-    }
+	}
 }

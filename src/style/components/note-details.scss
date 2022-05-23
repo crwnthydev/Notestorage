@@ -1,91 +1,92 @@
 .note-details {
-    
-    &__content {
-        background-color: $color-white;
-        border-bottom: 4px solid $color-primary;
-        margin: 0 0 vm(30) 0;
-        width: 100%;
-        color: $color-black;
-        padding: vm(15);
+	
+	&__content {
+		background-color: $color-white;
+		border-bottom: 4px solid $color-primary;
+		margin: 0 0 vm(30) 0;
+		width: 100%;
+		color: $color-black;
+		padding: vm(15);
+		box-sizing: border-box;
 
-        @include desktop {
-            margin: 0 0 vw(30) 0;
-            max-width: vw(470);
-            padding: vw(25);
-        }
+		@include desktop {
+			margin: 0 0 vw(30) 0;
+			max-width: vw(490);
+			padding: vw(25);
+		}
 
-        @include low-screen {
-            margin: 0 0 vh(30) 0;
-            max-width: vh(470);
-            padding: vh(25);
-        }
-    }
+		@include low-screen {
+			margin: 0 0 vh(30) 0;
+			max-width: vh(490);
+			padding: vh(25);
+		}
+	}
 
-    &__title {
-        font-family: $font-secondary;
-        font-size: vm(30);
-        line-height: vm(36);
-        margin: 0;
-        max-width: 85%;
-        width: 100%;
+	&__title {
+		font-family: $font-secondary;
+		font-size: vm(30);
+		line-height: vm(36);
+		margin: 0;
+		max-width: 85%;
+		width: 100%;
 
-        @include desktop {
-            font-size: vw(30);
-            line-height: vw(36);
-        }
+		@include desktop {
+			font-size: vw(30);
+			line-height: vw(36);
+		}
 
-        @include low-screen {
-            font-size: vh(30);
-            line-height: vh(36);
-        }
-    }
+		@include low-screen {
+			font-size: vh(30);
+			line-height: vh(36);
+		}
+	}
 
-    &__identificator {
-        color: $color-black;
-        opacity: 0.9;
-        font-size: vm(13);
-        line-height: 1em;
+	&__identificator {
+		color: $color-black;
+		opacity: 0.9;
+		font-size: vm(13);
+		line-height: 1em;
 
-        @include desktop {
-            font-size: vw(15);
-        }
+		@include desktop {
+			font-size: vw(15);
+		}
 
-        @include low-screen {
-            font-size: vh(15);
-        }
-    }
+		@include low-screen {
+			font-size: vh(15);
+		}
+	}
 
-    &__row {
-        margin: 0 0 vm(22);
-        padding: 0 0 vm(14) 0;
-        border-bottom: 2px solid $color-black;
-        display: flex;
-        align-items: flex-start;
-        justify-content: space-between;
+	&__row {
+		margin: 0 0 vm(22);
+		padding: 0 0 vm(14) 0;
+		border-bottom: 2px solid $color-black;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
 
-        @include desktop {
-            margin: 0 0 vw(22);
-            padding: 0 0 vw(14) 0;
-        }
+		@include desktop {
+			margin: 0 0 vw(22);
+			padding: 0 0 vw(14) 0;
+		}
 
-        @include low-screen {
-            margin: 0 0 vh(22);
-            padding: 0 0 vh(14) 0;
-        }
-    }
+		@include low-screen {
+			margin: 0 0 vh(22);
+			padding: 0 0 vh(14) 0;
+		}
+	}
 
-    &__body {
-        font-size: vm(20);
-        line-height: vm(24);
+	&__body {
+		font-size: vm(20);
+		line-height: vm(24);
 
-        @include desktop {
-            font-size: vw(20);
-            line-height: vw(24);
-        }
+		@include desktop {
+			font-size: vw(20);
+			line-height: vw(24);
+		}
 
-        @include low-screen {
-            font-size: vh(20);
-            line-height: vh(24);
-        }
-    }
+		@include low-screen {
+			font-size: vh(20);
+			line-height: vh(24);
+		}
+	}
 }

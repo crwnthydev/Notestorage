@@ -3,12 +3,12 @@ import { noteModule } from '@/store/noteModule';
 
 export default createStore({
   state: {
-    isHomePage: false,
-    isListPage: false,
-    isInfoPage: false,
+	isHomePage: false,
+	isListPage: false,
+	isInfoPage: false,
   },
   mutations: {
-    setHomeTrue(state){
+	setHomeTrue(state){
 			return state.isHomePage = true
 		},
 		setHomeFalse(state){
@@ -20,7 +20,7 @@ export default createStore({
 		setListFalse(state){
 			return state.isListPage = false
 		},
-    setInfoTrue(state){
+		setInfoTrue(state){
 			return state.isInfoPage = true
 		},
 		setInfoFalse(state){
@@ -30,6 +30,6 @@ export default createStore({
   actions: {
   },
   modules: {
-    note: noteModule
+	note: noteModule
   }
 })

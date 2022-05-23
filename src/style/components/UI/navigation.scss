@@ -1,200 +1,277 @@
 .navbar {
 
-    .header & {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+	.header & {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
 
-        a, button {
-            &:focus {
-                outline: 1px dashed $color-shady;
-            }
-        }
+		a, button {
+			&:focus {
+				outline: 1px dashed $color-shady;
+			}
+		}
 
-        &__home {
+		&__home {
 
-            @include desktop {
-                margin: 0 vw(16) 0 0;
-            }
+			@include desktop {
+				margin: 0 vw(16) 0 0;
+			}
 
-            @include low-screen {
-                margin: 0 vh(16) 0 0;
-            }
-        }
+			@include low-screen {
+				margin: 0 vh(16) 0 0;
+			}
+		}
 
-        &__button {
+		&__button {
 
-            &:last-of-type {
+			&:last-of-type {
 
-                @include desktop {
-                    margin: 0 0 0 vw(16);
-                }
-    
-                @include low-screen {
-                    margin: 0 0 0 vh(16);
-                }
-            }
-        }
+				@include desktop {
+					margin: 0 0 0 vw(16);
+				}
+	
+				@include low-screen {
+					margin: 0 0 0 vh(16);
+				}
+			}
+		}
 
-        &__wrapper {
+		&__wrapper {
 
-            @include desktop {
-                display: flex;
-                align-items: center;
-                justify-content: flex-end;
-            }
-        }
-        
-        @include desktop {
-            width: 100%;
-            max-width: vw(1360);
-            margin: 0 auto;
-            padding: vw(30) vw(15);
-        }
+			@include desktop {
+				display: flex;
+				align-items: center;
+				justify-content: flex-end;
+			}
+		}
+		
+		@include desktop {
+			width: 100%;
+			max-width: vw(1360);
+			margin: 0 auto;
+			padding: vw(30) vw(15);
+		}
 
-        @include low-screen {
-            max-width: vh(1360);
-            padding: vh(30) vh(15);
-        }
+		@include low-screen {
+			max-width: vh(1360);
+			padding: vh(30) vh(15);
+		}
 
-        .home & {
-            justify-content: center;
+		.home & {
+			justify-content: center;
 
-            &__wrapper {
-                justify-content: center;
-                overflow: hidden;
-                
-                @include desktop {
-                    height: vw(590);
-                }
+			&__wrapper {
+				justify-content: center;
+				overflow: hidden;
+				
+				@include desktop {
+					height: vw(590);
+				}
 
-                @include low-screen {
-                    height: vh(590);
-                }
-            }
-            
-            &__button {
-                font-size: vm(50);
-                font-family: $font-secondary;
-                position: relative;
-                color: $color-black;
-                background-color: $color-white;
-                font-weight: 500;
+				@include low-screen {
+					height: vh(590);
+				}
+			}
+			
+			&__button {
+				font-family: $font-secondary;
+				position: relative;
+				color: $color-black;
+				background-color: $color-white;
+				font-weight: 500;
 
-                &:hover {
-                    background-color: $color-shady-white;
-                }
+				&:hover {
+					background-color: $color-shady-white;
+				}
 
-                &::after {
-                    
-                    @include desktop {
-                        content: '';
-                        position: absolute;
-                        width: 102%;
-                        height: 4px;
-                        background-color: $color-primary;
-                        transition: $transition-base;
-                        bottom: vw(-30);
-                    }
+				&::after {
+					
+					@include desktop {
+						content: '';
+						position: absolute;
+						width: 102%;
+						height: 4px;
+						background-color: $color-primary;
+						transition: $transition-base;
+						bottom: vw(-30);
+					}
 
-                    @include low-screen {
-                        bottom: vh(-30);
-                    }
-                }
+					@include low-screen {
+						bottom: vh(-30);
+					}
+				}
 
-                &:focus {
-                    outline: none;
-                }
+				&:focus {
+					outline: none;
+				}
 
-                &:first-of-type {
-                    border-right: 2px solid $color-primary;
+				&:first-of-type {
+					
+					@include desktop {
+						border-right: 2px solid $color-primary;
 
-                    &::after {
-                        left: 0;
-                    }
+						&::after {
+							left: 0;
+						}
+					}
 
-                    &:hover {
+					&:hover {
 
-                        @include desktop {
+						@include desktop {
 
-                            &::after {
-                                transform: translateX(-200%);
-                            }
-                        }
-                    }
-                    
-                }
+							&::after {
+								transform: translateX(-200%);
+							}
+						}
+					}
+					
+				}
 
-                &:last-of-type {
-                    border-left: 2px solid $color-primary;
+				&:last-of-type {
+					
+					@include desktop {
+						border-left: 2px solid $color-primary;
 
-                    &::after {
-                        right: 0;
-                    }
+						&::after {
+							right: 0;
+						}
+					}
 
-                    &:hover {
+					&:hover {
 
-                        @include desktop {
-                            
-                            &::after {
-                                transform: translateX(200%);
-                            }
-                        }
-                    }
+						@include desktop {
+							
+							&::after {
+								transform: translateX(200%);
+							}
+						}
+					}
 
-                    @include desktop {
-                        margin: 0;
-                    }
-                }
+					@include desktop {
+						margin: 0;
+					}
+				}
 
-                @include desktop {
-                    width: vw(320);
-                    height: vw(500);
-                    font-size: vw(42);
-                }
+				@include desktop {
+					width: vw(320);
+					height: vw(500);
+					font-size: vw(42);
+				}
 
-                @include low-screen {
-                    width: vh(320);
-                    height: vh(500);
-                    font-size: vh(42);
-                }
-            }
-        }
-    }
+				@include low-screen {
+					width: vh(320);
+					height: vh(500);
+					font-size: vh(42);
+				}
+			}
+		}
+	}
 
-    .aside & {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+	.aside & {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 
-        &__wrapper {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            width: 100%;
-        }
+		&__wrapper {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			width: 100%;
+		}
 
-        &__home,
-        &__button {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 0 vm(12) 0;
-            padding-top: vm(8);
-            padding-bottom: vm(8);
+		&__home,
+		&__button {
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 0 vm(12) 0;
+			padding-top: vm(8);
+			padding-bottom: vm(8);
 
-            @include desktop {
-                margin: 0 0 vw(12) 0;
-                padding-top: vw(8);
-                padding-bottom: vw(8);
-            }
+			@include desktop {
+				margin: 0 0 vw(12) 0;
+				padding-top: vw(8);
+				padding-bottom: vw(8);
+			}
 
-            @include low-screen {
-                margin: 0 0 vh(12) 0;
-                padding-top: vh(8);
-                padding-bottom: vh(8);
-            }
-        }
-    }
+			@include low-screen {
+				margin: 0 0 vh(12) 0;
+				padding-top: vh(8);
+				padding-bottom: vh(8);
+			}
+		}
+	}
+
+	.header &,
+	.aside & {
+
+		.home & {
+
+			@include devices {
+
+				.navbar__wrapper {
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					width: 100%;
+					max-width: vm(290);
+				}
+
+				.btn {
+					width: 100%;
+					height: vm(250);
+					font-size: vm(42);
+					border-bottom: 4px solid $color-primary;
+				}
+				
+			}
+
+			@include landscape {
+
+				.navbar__wrapper {
+					flex-direction: row;
+					align-items: center;
+					max-width: vm(600)
+				}
+
+				.btn {
+
+					&:first-of-type {
+						border-right: 2px solid $color-primary;
+					}
+
+					&:last-of-type {
+						border-left: 2px solid $color-primary;
+					}
+				}
+			}
+		}
+
+		&:not(.home &){
+
+			@include devices {
+				padding-top: vm(20);
+				padding-bottom: vm(20);
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				box-sizing: border-box;
+
+				.navbar__wrapper {
+					border-bottom: 3px solid $color-white;
+					width: 100%;
+					max-width: vm(270);
+				}
+
+				.btn {
+					width: 100%;
+					max-width: vm(270);
+					margin: 0 0 vm(15) 0;
+				}
+			}
+		}
+	}
 }

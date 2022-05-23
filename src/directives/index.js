@@ -3,6 +3,6 @@ import Vintersection from "./Vintersection";
 
 
 export default [
-    Vfocus,
-    Vintersection
+	Vfocus,
+	Vintersection
 ]

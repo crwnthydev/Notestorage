@@ -2,8 +2,9 @@
 	<div class="notes-page">
 		<aside class="aside">
 			<custom-nav></custom-nav>
+			<h2 class="aside__heading">All notes:</h2>
 			<div class="notes-page__actions">
-				<custom-button @click="showCreateDialog">Create note</custom-button>
+				<custom-button @click="showCreateDialog">Create a note</custom-button>
 				<p>Search notes:</p>
 				<custom-input type="text" placeholder="Search" :model-value="searchQuery" @update:model-value="setSearchQuery"></custom-input>
 				<p>Sort notes:</p>

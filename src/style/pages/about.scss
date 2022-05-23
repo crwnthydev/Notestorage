@@ -1,60 +1,60 @@
 .about {
 
-    &__content {
-        width: 100%;
+	&__content {
+		width: 100%;
 
-        a, button {
-            &:focus {
-                outline: 1px dashed $color-shady;
-            }
-        }
+		a, button {
+			&:focus {
+				outline: 1px dashed $color-shady;
+			}
+		}
 
-        @include desktop {
-            max-width: vw(1360);
-            margin: 0 auto;
-            padding: vw(30) vw(15);
-        }
+		@include desktop {
+			max-width: vw(1360);
+			margin: 0 auto;
+			padding: vw(30) vw(15);
+		}
 
-        @include low-screen {
-            max-width: vh(1360);
-            padding: vh(30) vh(15);
-        }
-    }
+		@include low-screen {
+			max-width: vh(1360);
+			padding: vh(30) vh(15);
+		}
+	}
 
-    &__info {
-        margin: 0 0 vm(24) 0;
+	&__info {
+		margin: 0 0 vm(24) 0;
 
-        a {
-            text-decoration: underline;
-        }
+		a {
+			text-decoration: underline;
+		}
 
-        @include desktop {
-            margin: 0 0 vw(24) 0;
-        }
+		@include desktop {
+			margin: 0 0 vw(24) 0;
+		}
 
-        @include low-screen {
-            margin: 0 0 vh(24) 0;
-        }
-    }
+		@include low-screen {
+			margin: 0 0 vh(24) 0;
+		}
+	}
 
-    &__contacts {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        align-items: flex-start;
+	&__contacts {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
 
-        a {
-            display: inline;
-            margin: 0 0 vm(4) 0;
-            width: auto;
+		a {
+			display: inline;
+			margin: 0 0 vm(4) 0;
+			width: auto;
 
-            @include desktop {
-                margin: 0 0 vw(4) 0;
-            }
-    
-            @include low-screen {
-                margin: 0 0 vh(4) 0;
-            }
-        }
-    }
+			@include desktop {
+				margin: 0 0 vw(4) 0;
+			}
+	
+			@include low-screen {
+				margin: 0 0 vh(4) 0;
+			}
+		}
+	}
 }
